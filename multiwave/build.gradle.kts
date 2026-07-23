@@ -32,7 +32,11 @@ mavenPublishing {
 
     publishToMavenCentral(automaticRelease = true)
 
-    signAllPublications()
+    if (!System.getenv("JITPACK").isNullOrEmpty()) {
+        // Skip signing on JitPack
+    } else {
+        signAllPublications()
+    }
 
     pom {
         name.set("Multi Wave")
