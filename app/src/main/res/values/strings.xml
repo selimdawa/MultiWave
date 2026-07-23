@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Multi Wave</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="login_forget">Forgot password?</string>
+    <string name="login_login">Log in</string>
+    <string name="login_tourist_mode">Tourist mode</string>
+    <string name="login_verify_mode">Verification mode</string>
+    <string name="login_password">Please enter password</string>
+    <string name="login_password_mode">Password mode</string>
+    <string name="login_sms">Get verification code</string>
+    <string name="login_username">Enter phone number</string>
+
+    <string name="console_toggle">Toggle:</string>
+    <string name="console_toggle_direction">up side down</string>
+    <string name="console_toggle_running">running</string>
+    <string name="console_shape">Shape:</string>
+    <string name="console_shape_rect">rect</string>
+    <string name="console_shape_round">roundRect</string>
+    <string name="console_shape_oval">oval</string>
+    <string name="console_number">Number:</string>
+    <string name="console_wave">Wave:</string>
+    <string name="console_angle">Angle:</string>
+    <string name="console_alpha">Alpha:</string>
+    <string name="console_velocity">Velocity:</string>
+    <string name="console_progress">Progress:</string>
+    <string name="console_start_color">StartColor:</string>
+    <string name="console_close_color">CloseColor:</string>
+    <string name="console_controls_title">Wave Controls</string>
+    <string name="console_shape_label">Shape</string>
+    <string name="console_motion_layers_label">Motion &amp; Layers</string>
+    <string name="console_layers_label">Layers</string>
+    <string name="console_velocity_label">Velocity</string>
+    <string name="console_progress_label">Progress</string>
+    <string name="console_colors_label">Colors</string>
+    <string name="console_direction_label">Direction</string>
+    <string name="console_direction_top">Top</string>
+    <string name="console_direction_bottom">Bottom</string>
+    <string name="console_direction_left">Left</string>
+    <string name="console_direction_right">Right</string>
+</resources>

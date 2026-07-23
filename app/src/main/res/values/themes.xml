@@ -1,0 +1,60 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MultiWave" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.MultiWave" parent="Base.Theme.MultiWave" />
+
+    <style name="AppTheme" parent="Theme.MultiWave" />
+
+    <style name="AppTheme.Wrap">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.Wrap.Wrap" parent="AppTheme.Wrap">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.Division">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/division_line</item>
+        <item name="android:background">@color/colorDivision</item>
+        <item name="android:divider">@color/colorDivision</item>
+        <item name="android:dividerHeight">@dimen/division_line</item>
+    </style>
+
+    <style name="AppTheme.Division.Vertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/division_line</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/colorDivision</item>
+    </style>
+
+    <style name="AppTheme.Label" parent="AppTheme.Wrap.Wrap">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/textSize_content</item>
+        <item name="android:textColor">@color/colorTextContent</item>
+    </style>
+
+    <style name="AppTheme.Label.Title" parent="AppTheme.Label">
+        <item name="android:textColor">@color/colorTextTitle</item>
+        <item name="android:textSize">@dimen/textSize_title</item>
+    </style>
+
+    <style name="AppTheme.Label.Title.Small">
+        <item name="android:textSize">@dimen/textSize_titleSmall</item>
+    </style>
+
+    <style name="AppTheme.Label.Small" parent="AppTheme.Label">
+        <item name="android:textSize">@dimen/textSize_small</item>
+    </style>
+
+    <style name="AppTheme.Label.Assistant" parent="AppTheme.Label">
+        <item name="android:textColor">@color/colorTextAssistant</item>
+    </style>
+
+</resources>
