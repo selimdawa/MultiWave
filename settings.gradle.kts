@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MultiWave"
 include(":app")
-include(":library")
+include(":multiwave")

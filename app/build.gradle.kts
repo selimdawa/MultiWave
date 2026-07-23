@@ -33,11 +33,10 @@ android {
 }
 
 dependencies {
-    implementation(project(":library"))
+    implementation(project(":multiwave"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity)
     //Layout
     implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
 }
