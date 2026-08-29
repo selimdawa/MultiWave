@@ -1,8 +1,37 @@
-# MultiWave
+# MultiWave 🌊
 
-A powerful and customizable multi-layered wave animation header for Android, featuring gradient support and smooth wave effects.
+<p align="center">
+  <b>A powerful and customizable multi-layered wave animation header for Android.</b>
+</p>
 
-## Installation
+<p align="center">
+  MultiWave features gradient support, smooth wave effects, and highly flexible configuration for beautiful application headers and UI components.
+</p>
+
+<p align="center">
+ <a><img alt="Min SDK" src="https://img.shields.io/badge/Min SDK-24-020290?logo=android&logoColor=white"/></a>
+ <a><img alt="Target SDK" src="https://img.shields.io/badge/Target SDK-37-0EB265?logo=android&logoColor=0EB265"/></a>
+ <a href="https://kotlinlang.org"><img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-2.4.10-blue?logo=kotlin&logoColor=white"/></a>
+ <a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache_2.0-CC9900?logo=apache&logoColor=white"/></a>
+</p>
+
+---
+
+## ✨ Features
+
+- 🌊 Multi-layered wave animations
+- 🎨 Gradient color support
+- ⚡ High performance and smooth effects
+- 🛠 Highly customizable attributes
+- 🧩 Custom wave presets and shapes
+- 📱 Easy XML and programmatic integration
+- 🔄 Real-time animation control
+- 🎯 Progress-based wave levels
+- 🏗 Kotlin optimized
+
+---
+
+## 📦 Installation
 
 ### Maven Central
 Add the following dependency to your `build.gradle` (Module: app):
@@ -13,7 +42,9 @@ dependencies {
 }
 ```
 
-## Usage
+---
+
+## 🚀 Usage
 
 ### XML Implementation
 Add `MultiWaveHeader` to your layout XML file:
@@ -36,6 +67,8 @@ Add `MultiWaveHeader` to your layout XML file:
     app:mwhWaves="MultiWave" />
 ```
 
+---
+
 ### Attributes Reference
 
 | Attribute             | Description                                              | Default     |
@@ -53,6 +86,8 @@ Add `MultiWaveHeader` to your layout XML file:
 | `mwhCornerRadius`     | Corner radius for the `RoundRect` shape.                 | `25dp`      |
 | `mwhWaves`            | Presets (`MultiWave`, `PairWave`) or custom wave string. | `MultiWave` |
 
+---
+
 ### Custom Waves Configuration
 You can define custom wave layers using a string in the following format:
 `scaleX, scaleY, velocity, offsetX, offsetY` separated by new lines for multiple layers.
@@ -62,7 +97,9 @@ Example:
 app:mwhWaves="70,25,1.4,1.4,-26\n100,5,1.4,1.2,15"
 ```
 
-## Programmatic Usage (Kotlin)
+---
+
+## 🛠 Programmatic Usage (Kotlin)
 
 ```kotlin
 val multiWaveHeader = findViewById<MultiWaveHeader>(R.id.multiWaveHeader)
@@ -80,9 +117,23 @@ multiWaveHeader.velocity = 1.5f
 multiWaveHeader.setProgress(0.8f, DecelerateInterpolator(), 1000)
 ```
 
-## License
+---
 
-```
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+```text
 Copyright 2026 Selim Dawa
 
 Licensed under the Apache License, Version 2.0 (the "License");
