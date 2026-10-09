@@ -1,4 +1,4 @@
-# MultiWave 🌊
+# Multi Wave 🌊
 
 <p align="center">
   <b>A powerful and customizable multi-layered wave animation header for Android.</b>
