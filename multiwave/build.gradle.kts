@@ -22,8 +22,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 }
 
@@ -32,11 +32,7 @@ mavenPublishing {
 
     publishToMavenCentral(automaticRelease = true)
 
-    if (!System.getenv("JITPACK").isNullOrEmpty()) {
-        // Skip signing on JitPack
-    } else {
-        signAllPublications()
-    }
+    signAllPublications()
 
     pom {
         name.set("Multi Wave")

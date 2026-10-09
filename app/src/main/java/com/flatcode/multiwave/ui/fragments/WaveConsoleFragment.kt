@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.flatcode.multiwave.R
 import com.flatcode.multiwave.databinding.FragmentWaveConsoleBinding
-import com.flatcode.multiwave.ui.util.applyNavigationBarPadding
 import com.google.android.material.slider.Slider
 import io.selimdawa.multiwave.ShapeType
 import kotlin.math.roundToInt
@@ -31,7 +30,6 @@ class WaveConsoleFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.consoleCard.applyNavigationBarPadding()
 
         // Sync initial states
         binding.seekVelocity.value =

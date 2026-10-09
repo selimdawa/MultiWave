@@ -50,10 +50,9 @@ class ColorShadeSlider @JvmOverloads constructor(
             paint.color = shades[i]
             val left = i * itemWidth + padding
             val right = (i + 1) * itemWidth - padding
-            val top = padding
             val bottom = h - padding
 
-            rect.set(left, top, right, bottom)
+            rect.set(left, padding, right, bottom)
             canvas.drawRoundRect(rect, 8f, 8f, paint)
 
             if (i == selectedIndex) {

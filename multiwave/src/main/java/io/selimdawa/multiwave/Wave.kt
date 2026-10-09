@@ -25,17 +25,6 @@ class Wave(
         this.path = buildWavePath(width, viewHeight, fullScreen, progress)
     }
 
-    fun updateWavePath(viewWidth: Int, viewHeight: Int, progress: Float) {
-        val calculatedWave = (scaleY * this.waveHeight).toInt()
-        val maxWave = viewHeight * 0f.coerceAtLeast(1 - progress)
-        val finalWave = if (calculatedWave > maxWave) maxWave.toInt() else calculatedWave
-
-        if (lastWaveHeight != finalWave) {
-            this.width = (2 * scaleX * viewWidth).toInt()
-            this.path = buildWavePath(width, viewHeight, true, progress)
-        }
-    }
-
     private fun buildWavePath(w: Int, h: Int, fullScreen: Boolean, progress: Float): Path {
         val dp = (5 * dp2px(1f)).coerceAtLeast(5) // Optimized step
 

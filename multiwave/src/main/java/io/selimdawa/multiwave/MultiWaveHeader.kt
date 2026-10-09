@@ -101,16 +101,12 @@ class MultiWaveHeader @JvmOverloads constructor(
             field = value.coerceAtLeast(0f)
         }
 
-    var progress: Float = 0f
+    private var _progress: Float = 0f
+
+    var progress: Float
+        get() = _progress
         set(value) {
-            val safeValue = value.coerceIn(0f, 1f)
-            field = safeValue
-            needUpdateGradient = true
-            if (!isRunning) {
-                updateProgress(safeValue)
-            } else {
-                animProgress(safeValue, DecelerateInterpolator(), 300)
-            }
+            setProgress(value, DecelerateInterpolator(), if (isRunning) 300 else 0)
         }
 
     var shape: ShapeType = ShapeType.RoundRect
@@ -283,8 +279,8 @@ class MultiWaveHeader @JvmOverloads constructor(
         if ("-1" == tagStr) {
             wavesData =
                 "70,25,1.4,1.4,-26\n100,5,1.4,1.2,15\n420,0,1.15,1,-10\n520,10,1.7,1.5,20\n220,0,1,1,-15".split(
-                        "\\s+".toRegex()
-                    ).toTypedArray()
+                    "\\s+".toRegex()
+                ).toTypedArray()
         } else if ("-2" == tagStr) {
             wavesData = "0,0,1,0.5,90\n90,0,1,0.5,90".split("\\s+".toRegex()).toTypedArray()
         }
@@ -349,9 +345,19 @@ class MultiWaveHeader @JvmOverloads constructor(
         invalidate()
     }
 
-    fun setProgress(prog: Float, interpolator: Interpolator, duration: Int) {
-        this.progress = prog
-        animProgress(prog, interpolator, duration)
+    fun setProgress(
+        prog: Float,
+        interpolator: Interpolator,
+        duration: Int
+    ) {
+        val safeValue = prog.coerceIn(0f, 1f)
+        _progress = safeValue
+        needUpdateGradient = true
+        if (!isRunning || duration <= 0) {
+            updateProgress(safeValue)
+        } else {
+            animProgress(safeValue, interpolator, duration)
+        }
     }
 
     fun start() {
